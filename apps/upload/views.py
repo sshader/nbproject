@@ -113,7 +113,7 @@ def upload(req):
         annotations.createSource(uid, payload)
         ownership = annotations.addOwnership(id_source, id_ensemble, id_folder)
         source = ownership.source
-        REPOSITORY_DIR = "%s/%s" % (settings.HTTPD_MEDIA, "/pdf/repository")
+        REPOSITORY_DIR = "%s/%s" % (settings.HTTPD_MEDIA, "pdf/repository")
         f2 = open("%s/%s" % (REPOSITORY_DIR, id_source,),"wb")    
         f2.write(f.read())
         f2.close()                 

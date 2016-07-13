@@ -50,7 +50,7 @@ check_settings:
 
 create_dirs: 
 	echo 'attempting to create Media dir: ' $(HTTPD_MEDIA_DIR)
-#	if test -d $(HTTPD_MEDIA_DIR) ; then echo 'HTTP DIR OK'; else mkdir -p $(HTTPD_MEDIA_DIR);  fi
+	- mkdir -p $(HTTPD_MEDIA_DIR)
 	echo 'attempting to create Repository dir: ' $(HTTPD_REP_DIR)
 	- mkdir -p $(HTTPD_REP_DIR)
 	echo 'attempting to create Annotated dir: ' $(HTTPD_ANNOTATED_DIR)
